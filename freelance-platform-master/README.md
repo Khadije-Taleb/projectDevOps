@@ -30,7 +30,7 @@ SupFreelance est une plateforme web complète conçue pour mettre en relation de
 
 1.  **Cloner le dépôt**
     
-    git clone https://github.com/lemana12/freelance-platform
+    git clone https://github.com/Khadije-Taleb/freelance-platform
     cd SupFreelancer
     
 2.  **Base de données**
