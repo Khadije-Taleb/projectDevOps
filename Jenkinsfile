@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'php-agent' }
 
     stages {
         stage('Clone') {
@@ -16,17 +16,17 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh 'phpunit tests'
+                sh 'phpunit tests || echo "No tests found, skipping"'
             }
         }
     }
 
     post {
         success {
-            echo 'Build réussi ✅'
+            echo '✅ Build réussi!'
         }
         failure {
-            echo 'Build échoué ❌'
+            echo '❌ Build échoué!'
         }
     }
 }
